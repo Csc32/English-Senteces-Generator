@@ -1,2 +1,2 @@
 # English-IA-Practice
-This is a repo for the midudev hackathon using the cohere API
+This Page will created for practice English with IA
