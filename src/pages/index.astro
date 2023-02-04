@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="English IA Practice">
+	<main class="container">
+		<header class="container__header">
+			<h1 class="header__title">
+				English IA <span class="span">Practice</span>
+			</h1>
+		</header>
+
+		<section class="container__input">
+			<h2 class="input__title">Say Hi</h2>
+			<div class="container__chat" id="chat"></div>
+		</section>
+
+		<section class="container__input">
+			<label for="input-text" class="input__title"> Write a message</label>
+			<textarea
+				class="input__text"
+				placeholder="Say Hello"
+				id="input-text"
+				cols="27"></textarea>
+		</section>
+		<div class="container__btn">
+			<button class="btn__submit" id="btn-submit">Send message</button>
+		</div>
+	</main>
+</Layout>
+<footer class="container --footer">
+	<section class="container__information">
+		<div class="information__group">
+			<h2 class="information__text">Author:</h2>
+			<p class="information__text">Csc32</p>
+		</div>
+	</section>
+	<section class="container__information">
+		<h2 class="information__title --social">Social Networks:</h2>
+		<div class="container__social">
+			<img
+				class="social__image"
+				src="/github-icon.svg"
+				alt="github"
+				id="github"
+			/>
+			<img
+				class="social__image"
+				src="/linkdin-icon.svg"
+				alt="LinkDin"
+				id="linkdin"
+			/>
+			<img
+				class="social__image"
+				src="/twitter-icon.svg"
+				alt="twitter"
+				id="twitter"
+			/>
+		</div>
+	</section>
+</footer>
+<script src="../js/main.js"></script>
