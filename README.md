@@ -1,6 +1,6 @@
 # English IA Practice
 
-This project was created to the midudev hackathon. Consist in a chat that permit people practice their English Skill using IA.
+This project was created to the midudev hackathon. Consist in a English sentences generator about a topic.
 
 This project will use the [co:here](https://cohere.ai/) API
 
@@ -40,9 +40,8 @@ All commands are run from the root of the project, from a terminal:
 
 ## TODO:
 
-- [ ] Programming the chat
-- [ ] Create the loader in the chat
-- [ ] Create the chats window
+- [ x ] Add the loader
+- [ ] Do the number input
 - [ ] Deploy de project
 
 #### This is all until the moment
