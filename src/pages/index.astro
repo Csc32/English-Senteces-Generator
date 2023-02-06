@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import Scripts from "../components/Scripts.astro";
 ---
 
 <Layout title="English IA Practice">
@@ -11,18 +13,26 @@ import Layout from "../layouts/Layout.astro";
 		</header>
 
 		<section class="container__input">
+			<Button />
 			<h2 class="input__title">Say Hi</h2>
-			<div class="container__chat" id="chat"></div>
+			<textarea
+				id="prompt"
+				cols="30"
+				rows="10"
+				class="container__prompt visible"
+				>Generate 5 sentences about...
+			</textarea>
 		</section>
 
 		<section class="container__input">
 			<label for="input-text" class="input__title"> Write a message</label>
-			<textarea
+			<input
 				class="input__text"
-				placeholder="Say Hello"
+				placeholder="Differents jobs"
 				id="input-text"
-				cols="27"></textarea>
+			/>
 		</section>
+
 		<div class="container__btn">
 			<button class="btn__submit" id="btn-submit">Send message</button>
 		</div>
@@ -59,4 +69,4 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</section>
 </footer>
-<script src="../js/main.js"></script>
+<Scripts />
