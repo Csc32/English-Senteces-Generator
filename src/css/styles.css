@@ -1,18 +1,21 @@
 :root {
-	--bg--primary: #616b97;
-	--bg-second: #867170;
-	--bg-header: #61968e;
+	--bg--primary: #6a3dc5;
+	--shadow-1: #57389b;
+	--shadow-2: #583eaf;
 	--text-color: #fff;
 	--text-span: #fef445;
 	--text-big: 2rem;
 	--tex-medium: 1.5rem;
 	--text-small: 1rem;
+	--space: 0.5px;
+	--font-title: "Monserrat";
+	--font-text: "Merriwether Black";
 }
 @font-face {
-	font-family: "Roboto Mono";
-	src: url("/font/RobotoMono-Regular.woff2");
-	font-family: "Roboto Mono Bold";
-	src: url("/font/RobotoMono-SemiBold.woff2");
+	font-family: "Monserrat";
+	src: url("/public/font/Montserrat_font/Montserrat-VariableFont_wght.woff2");
+	font-family: "Merriwether Black";
+	src: url("/public/font/Merriweather/Merriweather-BlackItalic.ttf");
 }
 * {
 	margin: 0;
@@ -25,7 +28,7 @@ body {
 	overflow-x: hidden;
 	color: var(--text-color);
 	background: var(--bg--primary);
-	font-family: "Roboto Mono";
+	font-family: var(--font-text);
 }
 .container {
 	width: 100%;
@@ -41,8 +44,8 @@ body {
 	color: var(--text-color);
 	border-radius: 0px 0px 2em 2em;
 	background: transparent;
-	box-shadow: 22px 22px 53px #515a7f, -22px -22px 53px #717caf;
-	font: calc(var(--text-big) - 2.8vh) "Roboto Mono Bold";
+	box-shadow: 22px 22px 53px var(--shadow-1), -22px -22px 53px var(--shadow-2);
+	font: italic calc(var(--text-big) - 3.5vh) var(--font-title);
 	position: relative;
 }
 .header__title {
@@ -65,7 +68,8 @@ body {
 	gap: 1em;
 }
 .input__title {
-	font: var(--tex-medium) "Roboto Mono Bold";
+	font: italic calc(var(--tex-medium) + 2vh) var(--font-title);
+	color: var(--text-span);
 	width: 100%;
 	text-align: center;
 }
@@ -76,10 +80,12 @@ body {
 	border-radius: 20px;
 	padding: 1em;
 	color: var(--text-color);
-	font: var(--text-small) "Roboto Mono Bold";
+	font: var(--text-small);
+	letter-spacing: var(--space);
 	border: none;
 	background: transparent;
-	box-shadow: 22px 22px 53px #515a7f, -22px -22px 53px #717caf;
+	box-shadow: 22px 22px 53px var(--shadow-1), -22px -22px 53px var(--shadow-2);
+	line-height: 1.8em;
 	resize: none;
 }
 
@@ -90,8 +96,10 @@ body {
 	border: none;
 	padding: 0.5em 0.9em;
 	color: var(--text-color);
-	font-size: var(--text-small) "Roboto Mono";
-	box-shadow: 22px 22px 53px #515a7f, -22px -22px 53px #717caf;
+	font-size: calc(var(--text-small) + 1vh);
+	font-style: italic;
+	font-weight: bold;
+	box-shadow: 22px 22px 53px var(--shadow-1), -22px -22px 53px var(--shadow-2);
 	background: transparent;
 	border-radius: 20px;
 	transition: ease all 0.5s;
@@ -112,19 +120,20 @@ body {
 }
 .btn__submit {
 	width: 50%;
-	padding: 1em;
+	padding: 0.5em;
 	border: outset var(--bg--primary);
 	background: transparent;
 	border-radius: 1em;
-	box-shadow: 22px 22px 53px #515a7f, -22px -22px 53px #717caf;
+	box-shadow: 22px 22px 53px var(--shadow-1), -22px -22px 53px var(--shadow-2);
 	transition: ease 0.3s all;
-	color: var(--text-color);
-	font: var(--text-small) "Roboto Mono Bold";
+	color: var(--text-span);
+	font: italic var(--tex-medium) var(--font-title);
+	font-weight: 600;
 	cursor: pointer;
 }
 .btn__submit:hover {
-	background: #515a7fdb;
-	box-shadow: 22px 22px 53px #515a7f, -22px -22px 53px #717caf;
+	background: #2c16768f;
+	box-shadow: 22px 22px 53px var(--shadow-1), -22px -22px 53px var(--shadow-2);
 }
 .container.--footer {
 	margin-top: 1em;
@@ -150,7 +159,7 @@ body {
 .information__text,
 .information__title {
 	text-align: center;
-	font: var(--tex-medium) "Roboto Mono Bold";
+	font: italic var(--tex-medium) var(--font-title);
 }
 .information__title {
 	margin-top: 0.5em;
@@ -166,6 +175,8 @@ body {
 	width: 4em;
 	height: 4em;
 	cursor: pointer;
+	filter: contrast(100%) invert(55%) blur(0.9px);
+	transition: 0.5s ease all;
 }
 /* social networks styles */
 .social__image.--twitter {
@@ -181,6 +192,9 @@ body {
 .social__image.--linkdin {
 	background: url("/public/linkdin-icon.svg") no-repeat;
 	content: "";
+}
+.social__image:hover {
+	filter: contrast(200%) invert(100%) blur(0);
 }
 /* styles to hidde the content */
 .visible {
@@ -338,7 +352,10 @@ body {
 }
 @media (width >= 700px) {
 	.container__header {
-		font-size: calc(var(--text-big) - 2vh);
+		font-size: calc(var(--text-big) - 1vh);
+	}
+	.container__prompt {
+		font-size: var(--tex-medium);
 	}
 	.container.--footer {
 		width: 100vw;
