@@ -3,7 +3,7 @@ async function getResponse(amount = 5, userPrompt) {
 	const data = {
 		model: "command-xlarge-nightly",
 		prompt: `generate a list of ${amount} examples sentences about ${userPrompt}`,
-		max_tokens: 300,
+		max_tokens: 400,
 		temperature: 1,
 		k: 0,
 		p: 1,

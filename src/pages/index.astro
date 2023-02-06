@@ -4,22 +4,23 @@ import Button from "../components/Button.astro";
 import Scripts from "../components/Scripts.astro";
 ---
 
-<Layout title="English IA Practice">
+<Layout title="Senteces Generator">
 	<main class="container">
 		<header class="container__header">
 			<h1 class="header__title">
-				English IA <span class="span">Practice</span>
+				English Sentences <span class="span">Generator</span>
 			</h1>
 		</header>
 
 		<section class="container__input">
 			<Button />
-			<h2 class="input__title">Say Hi</h2>
+			<h2 class="input__title">Generated Input</h2>
 			<textarea
 				id="prompt"
 				cols="30"
 				rows="10"
 				class="container__prompt visible"
+				disabled
 				>Generate 5 sentences about...
 			</textarea>
 		</section>
@@ -48,24 +49,18 @@ import Scripts from "../components/Scripts.astro";
 	<section class="container__information">
 		<h2 class="information__title --social">Social Networks:</h2>
 		<div class="container__social">
-			<img
-				class="social__image"
-				src="/github-icon.svg"
-				alt="github"
-				id="github"
-			/>
-			<img
-				class="social__image"
-				src="/linkdin-icon.svg"
-				alt="LinkDin"
-				id="linkdin"
-			/>
-			<img
-				class="social__image"
-				src="/twitter-icon.svg"
-				alt="twitter"
-				id="twitter"
-			/>
+			<a
+				href="https://twitter.com/Csc032_"
+				class="social__image --twitter"
+				target="_blank"></a>
+			<a
+				href="https://github.com/Csc32"
+				class="social__image --github"
+				target="_blank"></a>
+			<a
+				href="https://linkedin.com/in/carlos-sanzonetty-9a8085230"
+				class="social__image --linkdin"
+				target="_blank"></a>
 		</div>
 	</section>
 </footer>

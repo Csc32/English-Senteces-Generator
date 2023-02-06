@@ -80,7 +80,9 @@ body {
 	border: none;
 	background: transparent;
 	box-shadow: 22px 22px 53px #515a7f, -22px -22px 53px #717caf;
+	resize: none;
 }
+
 .input__text {
 	width: 80%;
 	height: 10vh;
@@ -157,11 +159,28 @@ body {
 	width: 100vw;
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 	gap: 0.5em;
 }
 .social__image {
-	width: 3.5em;
+	width: 4em;
+	height: 4em;
 	cursor: pointer;
+}
+/* social networks styles */
+.social__image.--twitter {
+	background: no-repeat center url("/public/twitter-icon.svg");
+	height: 3.8em;
+}
+
+.social__image.--github {
+	background: url("/public/github-icon.svg") no-repeat;
+	content: "";
+}
+
+.social__image.--linkdin {
+	background: url("/public/linkdin-icon.svg") no-repeat;
+	content: "";
 }
 /* styles to hidde the content */
 .visible {
@@ -337,7 +356,9 @@ body {
 	.container__social {
 		width: 100%;
 		justify-content: center;
-		align-items: center;
 		gap: 2.5em;
+	}
+	.container__image {
+		width: 3.5em;
 	}
 }
