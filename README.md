@@ -1,8 +1,8 @@
-# English IA Practice
+# English Sentences Generator
 
-This project was created to the midudev hackathon. Consist in a English sentences generator about a topic.
+Generate any example depending on your needs.
 
-This project will use the [co:here](https://cohere.ai/) API
+This project was created for the midudev hackathon and use the [co:here](https://cohere.ai/) API
 
 ## Technologies
 
@@ -10,6 +10,12 @@ This project will use the [co:here](https://cohere.ai/) API
 - Vanilla JavaScript
 - Vanilla CSS
 - Cohere
+
+## Tools uses to make this projects:
+
+- [Mirio](https://miro.com/)
+- [uiver.io](https://uiverse.io/)
+- [VSCODE](https://code.visualstudio.com/)
 
 ## Installation
 
@@ -40,8 +46,7 @@ All commands are run from the root of the project, from a terminal:
 
 ## TODO:
 
-- [ x ] Add the loader
-- [ ] Do the number input
-- [ ] Deploy de project
+- [x] Add the loader
+- [x] Deploy de project
 
 #### This is all until the moment
