@@ -93,7 +93,7 @@ body {
 	width: 80%;
 	height: 10vh;
 	margin-bottom: 1em;
-	border: none;
+	border: 1px solid var(--bg--primary);
 	padding: 0.5em 0.9em;
 	color: var(--text-color);
 	font-size: calc(var(--text-small) + 1vh);
@@ -102,15 +102,15 @@ body {
 	box-shadow: 22px 22px 53px var(--shadow-1), -22px -22px 53px var(--shadow-2);
 	background: transparent;
 	border-radius: 20px;
-	transition: ease all 0.5s;
+	transition: ease all 0.3s;
+	outline: none;
 	resize: none;
 }
 .input__text::placeholder {
 	color: rgba(255, 255, 255, 0.647);
 }
-.input__text:active {
-	color: #515a7f;
-	border-color: #0033ff;
+.input__text:focus {
+	border-color: var(--text-span);
 }
 .container__btn {
 	width: 100vw;
