@@ -45,7 +45,7 @@ body {
 	border-radius: 0px 0px 2em 2em;
 	background: transparent;
 	box-shadow: 22px 22px 53px var(--shadow-1), -22px -22px 53px var(--shadow-2);
-	font: italic calc(var(--text-big) - 3.5vh) var(--font-title);
+	font: italic calc(var(--text-big) - 1.5vh) var(--font-title);
 	position: relative;
 }
 .header__title {
