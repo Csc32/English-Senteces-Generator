@@ -49,5 +49,6 @@ All commands are run from the root of the project, from a terminal:
 - [x] Add the loader
 - [x] Deploy de project
 - [ ] Create a landing page explaining the project
+- [ ] Add a history about the sentences generated
 
 #### This is all until the moment
