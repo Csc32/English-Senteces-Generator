@@ -48,5 +48,6 @@ All commands are run from the root of the project, from a terminal:
 
 - [x] Add the loader
 - [x] Deploy de project
+- [ ] Create a landing page explaining the project
 
 #### This is all until the moment
