@@ -4,64 +4,45 @@ import Button from "../components/Button.astro";
 import Scripts from "../components/Scripts.astro";
 ---
 
-<Layout title="Senteces Generator">
-	<main class="container">
-		<header class="container__header">
-			<h1 class="header__title">
-				English Sentences <span class="span">Generator</span>
+<Layout title="Sentences Generator">
+	<main class="flex flex-col justify-center mb-8">
+		<header class="bg-blue-700 text-white p-5 text-center">
+			<h1 class="font-extrabold text-4xl font-title">
+				English Sentences <span class="text-blue-300">Generator</span>
 			</h1>
 		</header>
 
-		<section class="container__input">
+		<section class="flex flex-col items-center space-y-4 p-5">
 			<Button />
-			<h2 class="input__title">Generated Input</h2>
+			<h2 class="text-lg font-semibold text-white">Generated Input</h2>
 			<textarea
 				id="prompt"
 				cols="30"
 				rows="10"
-				class="container__prompt visible"
-				disabled
-				>Generate 5 sentences about...
+				class="w-full md:w-1/2 p-3 bg-blue-100 border border-blue-300 rounded text-gray-700 disabled:opacity-50"
+				disabled>
+				Generate 5 sentences about...
 			</textarea>
 		</section>
 
-		<section class="container__input">
-			<label for="input-text" class="input__title"> Write a message</label>
+		<section class="flex flex-col items-center space-y-4 p-5">
+			<label for="input-text" class="text-lg font-semibold text-white">
+				Write a message
+			</label>
 			<input
-				class="input__text"
-				placeholder="Differents jobs"
+				class="w-full md:w-1/2 p-3 bg-blue-50 border border-blue-300 rounded text-gray-700 focus:outline-none focus:ring focus:ring-blue-400"
+				placeholder="Different jobs"
 				id="input-text"
 			/>
 		</section>
 
-		<div class="container__btn">
-			<button class="btn__submit" id="btn-submit">Send message</button>
+		<div class="flex justify-center p-5">
+			<button
+				class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+				id="btn-submit">
+				Send message
+			</button>
 		</div>
 	</main>
+	<Scripts />
 </Layout>
-<footer class="container --footer">
-	<section class="container__information">
-		<div class="information__group">
-			<h2 class="information__text">Author:</h2>
-			<p class="information__text">Csc32</p>
-		</div>
-	</section>
-	<section class="container__information">
-		<h2 class="information__title --social">Social Networks:</h2>
-		<div class="container__social">
-			<a
-				href="https://twitter.com/Csc032_"
-				class="social__image --twitter"
-				target="_blank"></a>
-			<a
-				href="https://github.com/Csc32"
-				class="social__image --github"
-				target="_blank"></a>
-			<a
-				href="https://linkedin.com/in/carlos-sanzonetty-9a8085230"
-				class="social__image --linkdin"
-				target="_blank"></a>
-		</div>
-	</section>
-</footer>
-<Scripts />

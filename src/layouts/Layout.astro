@@ -8,7 +8,7 @@ const { title } = Astro.props;
 import "../css/styles.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -18,7 +18,39 @@ import "../css/styles.css";
 		<link rel="stylesheet" href="../css/styles.css" />
 		<title>{title}</title>
 	</head>
-	<body class="">
+	<body class="w-full bg-dark-navy text-whiten">
 		<slot />
+
+		<footer class="bg-blue-800 text-white py-5">
+			<section class="text-center mb-7">
+				<div class="space-y-3">
+					<h1 class="font-semibold text-lg">Author:</h1>
+					<p class="text-blue-301">Csc32</p>
+				</div>
+			</section>
+			<section class="text-center">
+				<h1 class="font-semibold text-lg mb-4 font-title">Social Networks:</h1>
+				<div class="flex justify-center space-x-7">
+					<a
+						href="https://twitter.com/Csc031_"
+						class="text-blue-301 hover:text-white transition font-text"
+						target="_blank">
+						Twitter
+					</a>
+					<a
+						href="https://github.com/Csc31"
+						class="text-blue-301 hover:text-white transition font-text"
+						target="_blank">
+						GitHub
+					</a>
+					<a
+						href="https://linkedin.com/in/carlos-sanzonetty-10a8085230"
+						class="text-blue-301 hover:text-white transition font-text"
+						target="_blank">
+						LinkedIn
+					</a>
+				</div>
+			</section>
+		</footer>
 	</body>
 </html>

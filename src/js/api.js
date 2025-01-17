@@ -1,7 +1,7 @@
 const API = import.meta.env.PUBLIC_API_KEY;
 async function getResponse(amount = 5, userPrompt) {
 	const data = {
-		model: "command-xlarge-nightly",
+		model: "command-r-plus-08-2024",
 		prompt: `generate a list of ${amount} examples sentences about ${userPrompt}`,
 		max_tokens: 400,
 		temperature: 1,
@@ -12,7 +12,7 @@ async function getResponse(amount = 5, userPrompt) {
 		stop_sequences: [],
 		return_likelihoods: "NONE",
 	};
-	const result = await fetch("https://api.cohere.ai/generate", {
+	const result = await fetch("https://api.cohere.com/v2/chat", {
 		method: "POST",
 		headers: {
 			Authorization: `BAERER ${API}`,
